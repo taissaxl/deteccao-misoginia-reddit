@@ -1,0 +1,34 @@
+# dados brutos do Apify: contêm nomes de usuário
+dados/brutos/
+# sal dos pseudônimos
+.sal_pseudonimos
+
+# textos das postagens (mesmo anonimizados, podem levar ao autor por busca)
+dados/processados/
+rotulagem/
+resultados/*.csv
+resultados/*.jsonl
+
+# bases públicas: grandes e com licença própria; quem reproduzir baixa das fontes
+dados/bases/
+
+# respostas das anotadoras, com os nomes
+rotulos_misoginia_reddit.csv
+backup_*.csv
+
+# segredos (chave da API, se algum dia for parar num arquivo)
+.env
+
+# ambiente e caches
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# modelos treinados (grandes demais para o GitHub)
+modelos/
+
+# exceções: resultados agregados, sem texto de postagem
+!resultados/avaliacao_metricas.csv
+!resultados/avaliacao_metricas_300.csv
+!resultados/concordancia.csv
+!resultados/rotulos_por_origem.csv
