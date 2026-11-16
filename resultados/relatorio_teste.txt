@@ -1,0 +1,29 @@
+=== Teste (TuPy-E oficial) | limiar 0.50 ===
+               precision    recall  f1-score   support
+
+nao_misoginia      0.984     0.987     0.986      7995
+    misoginia      0.658     0.601     0.628       323
+
+     accuracy                          0.972      8318
+    macro avg      0.821     0.794     0.807      8318
+ weighted avg      0.971     0.972     0.972      8318
+
+Matriz de confusão (linhas = real, colunas = previsto):
+[[7894  101]
+ [ 129  194]]
+
+=== Teste (TuPy-E oficial) | limiar 0.43 ===
+               precision    recall  f1-score   support
+
+nao_misoginia      0.984     0.987     0.986      7995
+    misoginia      0.654     0.604     0.628       323
+
+     accuracy                          0.972      8318
+    macro avg      0.819     0.795     0.807      8318
+ weighted avg      0.971     0.972     0.972      8318
+
+Matriz de confusão (linhas = real, colunas = previsto):
+[[7892  103]
+ [ 128  195]]
+
+AUC: 0.913

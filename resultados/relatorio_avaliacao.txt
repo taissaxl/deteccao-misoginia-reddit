@@ -1,0 +1,100 @@
+Anotadoras: camilly-coelho-alexandre, mariana, taissa | postagens: 300
+  ATENÇÃO: taissa não rotulou 1 postagem(ns): t3_1vcl35s (nº 239)
+  Concordância calculada sobre as 299 postagens com as três respostas.
+
+1. CONCORDÂNCIA ENTRE AS ANOTADORAS (Kappa de Fleiss; interpretação de Landis e Koch)
+  Piloto     n= 60 | 4 categorias: 0.664 (substancial) | misoginia x resto: 0.613 (substancial) | unânimes: 53 | 2x1: 7 | empates triplos: 0
+  Avaliação  n=239 | 4 categorias: 0.609 (substancial) | misoginia x resto: 0.396 (razoável) | unânimes: 201 | 2x1: 37 | empates triplos: 1
+  Total      n=299 | 4 categorias: 0.619 (substancial) | misoginia x resto: 0.450 (moderada) | unânimes: 254 | 2x1: 44 | empates triplos: 1
+  Cohen camilly-coelho-alexandre x mariana: 0.668
+  Cohen camilly-coelho-alexandre x taissa: 0.662
+  Cohen mariana x taissa: 0.539
+
+2. RÓTULOS FINAIS (voto majoritário)
+piloto        avaliação  piloto  total
+rotulo_final                          
+empate                1       0      1
+misoginia            10       3     13
+neutro              205      54    259
+odio_geral            6       0      6
+pular                18       3     21
+total               240      60    300
+  Tipo da misoginia: {'explicita': 10, 'implicita': 3}
+
+  Rótulos finais por estrato:
+rotulo_final  empate  misoginia  neutro  odio_geral  pular  total
+estrato                                                          
+neutro_kw          0          1      46           1      2     50
+neutro_outro       0          0      49           0      1     50
+odio_kw            0         11      98           2     14    125
+odio_outro         1          1      66           3      4     75
+total              1         13     259           6     21    300
+
+  Rótulos finais por modo de coleta:
+rotulo_final             empate  misoginia  neutro  odio_geral  pular  total
+modo_coleta                                                                 
+busca_por_termo               0          9      35           1     15     60
+subreddits_gerais             0          1      78           0      1     80
+subreddits_selecionados       1          3     146           5      5    160
+total                         1         13     259           6     21    300
+
+  Subreddits das postagens misóginas: {'r/relacionamentos': 8, 'r/opiniaoimpopular': 2, 'r/historiasdepunheta': 1, 'r/desabafosdavida': 1, 'r/farialimabets': 1}
+  Subreddits mais frequentes na amostra: {'r/relacionamentos': 73, 'r/opiniaoimpopular': 24, 'r/desabafos': 19, 'r/farialimabets': 18, 'r/brasilivre': 14, 'r/missao14': 14, 'r/TinderBR': 12, 'r/Maromba': 11, 'r/saopaulo': 6, 'r/desabafosdavida': 6}
+  Postagens puladas por modo de coleta: {'busca_por_termo': 15, 'subreddits_selecionados': 5, 'subreddits_gerais': 1} (lista em resultados/postagens_puladas.csv, para inspeção manual)
+  Empates triplos: 1 (regra: excluir)
+
+3. LLM COMO QUARTA ANOTADORA
+  Postagens comparadas: 297 (fora: bloqueadas pela LLM e empates)
+  Cohen LLM x rótulo final: 4 categorias 0.529 (moderada) | misoginia x resto 0.503 (moderada)
+  Cohen LLM x camilly-coelho-alexandre: 0.537
+  Cohen LLM x mariana: 0.490
+  Cohen LLM x taissa: 0.470
+  (média dos Kappas de Cohen entre pares de anotadoras humanas: 0.623)
+  Fleiss nas mesmas 297 postagens: 3 humanas 0.619 | 3 humanas + LLM 0.559
+  Matriz de confusão (linhas: rótulo final; colunas: LLM):
+rotulo_llm    misoginia  neutro  odio_geral  pular
+rotulo_final                                      
+misoginia             9       4           0      0
+neutro                7     247           3      0
+odio_geral            1       3           2      0
+pular                 4       9           1      7
+
+4. AVALIAÇÃO DOS CLASSIFICADORES (postagens de avaliação): 221 postagens, 10 misóginas (fora da avaliação: {'pular': 18, 'empate': 1})
+                     metodo   n  previstas  vp  fp  fn  precisao    precisao_ic  recall      recall_ic    f1          f1_ic
+                  BERTimbau 221          9   4   5   6     0.444 [0.125; 0.800]     0.4 [0.111; 0.750] 0.421 [0.125; 0.667]
+    BERTimbau (normalizado) 221          9   4   5   6     0.444 [0.125; 0.800]     0.4 [0.111; 0.750] 0.421 [0.125; 0.667]
+ Cascata BERTimbau + léxico 221          9   4   5   6     0.444 [0.125; 0.800]     0.4 [0.111; 0.750] 0.421 [0.125; 0.667]
+             Léxico sozinho 221          9   2   7   8     0.222 [0.000; 0.556]     0.2 [0.000; 0.500] 0.211 [0.000; 0.455]
+LLM (Gemini 3.5 Flash Lite) 219         12   8   4   2     0.667 [0.364; 0.933]     0.8 [0.500; 1.000] 0.727 [0.461; 0.923]
+
+  Diferença de F1 para o BERTimbau (normalizado) (IC 95% pareado; se contém 0, a diferença não é conclusiva):
+    BERTimbau: +0.000 [0.000; 0.000]
+    Cascata BERTimbau + léxico: +0.000 [0.000; 0.000]
+    Léxico sozinho: -0.208 [-0.546; 0.143]
+    LLM (Gemini 3.5 Flash Lite): +0.312 [-0.067; 0.667]
+  AUC do BERTimbau (texto original): 0.801
+  AUC do BERTimbau (texto normalizado): 0.801
+
+  Recall por tipo de misoginia (rótulo final):
+    explicita (n=7): BERTimbau: 4/7 | BERTimbau (normalizado): 4/7 | Cascata BERTimbau + léxico: 4/7 | Léxico sozinho: 2/7 | LLM (Gemini 3.5 Flash Lite): 5/7
+    implicita (n=3): BERTimbau: 0/3 | BERTimbau (normalizado): 0/3 | Cascata BERTimbau + léxico: 0/3 | Léxico sozinho: 0/3 | LLM (Gemini 3.5 Flash Lite): 3/3
+
+5. ANÁLISE COMPLEMENTAR (piloto + avaliação, 300 postagens): 278 postagens, 13 misóginas (fora da avaliação: {'pular': 21, 'empate': 1})
+                     metodo   n  previstas  vp  fp  fn  precisao    precisao_ic  recall      recall_ic    f1          f1_ic
+                  BERTimbau 278         11   5   6   8     0.455 [0.125; 0.778]   0.385 [0.091; 0.667] 0.417 [0.105; 0.667]
+    BERTimbau (normalizado) 278         11   5   6   8     0.455 [0.125; 0.778]   0.385 [0.091; 0.667] 0.417 [0.105; 0.667]
+ Cascata BERTimbau + léxico 278         11   5   6   8     0.455 [0.125; 0.778]   0.385 [0.091; 0.667] 0.417 [0.105; 0.667]
+             Léxico sozinho 278         10   2   8  11     0.200 [0.000; 0.500]   0.154 [0.000; 0.385] 0.174 [0.000; 0.385]
+LLM (Gemini 3.5 Flash Lite) 276         17   9   8   4     0.529 [0.273; 0.769]   0.692 [0.417; 0.923] 0.600 [0.348; 0.789]
+
+  Diferença de F1 para o BERTimbau (normalizado) (IC 95% pareado; se contém 0, a diferença não é conclusiva):
+    BERTimbau: +0.000 [0.000; 0.000]
+    Cascata BERTimbau + léxico: +0.000 [0.000; 0.000]
+    Léxico sozinho: -0.239 [-0.545; 0.079]
+    LLM (Gemini 3.5 Flash Lite): +0.187 [-0.135; 0.520]
+  AUC do BERTimbau (texto original): 0.833
+  AUC do BERTimbau (texto normalizado): 0.833
+
+  Recall por tipo de misoginia (rótulo final):
+    explicita (n=10): BERTimbau: 5/10 | BERTimbau (normalizado): 5/10 | Cascata BERTimbau + léxico: 5/10 | Léxico sozinho: 2/10 | LLM (Gemini 3.5 Flash Lite): 6/10
+    implicita (n=3): BERTimbau: 0/3 | BERTimbau (normalizado): 0/3 | Cascata BERTimbau + léxico: 0/3 | Léxico sozinho: 0/3 | LLM (Gemini 3.5 Flash Lite): 3/3

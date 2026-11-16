@@ -1,0 +1,8 @@
+Modelo solicitado: gemini-3.5-flash-lite | versão informada pela API: gemini-3.5-flash-lite
+Execução: 2026-10-26T18:57:09 a 2026-10-26T19:39:04
+Configuração: thinking_level = low, saída JSON com esquema, filtros de segurança desligados (BLOCK_NONE), temperatura padrão, zero-shot, uma chamada por postagem
+Chamadas: 302 | tokens de entrada: 297931 | tokens de saída: 19417 | tokens de raciocínio: 0
+
+Primeira tentativa: 300 chamadas, 2 bloqueios, 0 fora do formato
+Resultado final: {'ok': 298, 'bloqueio': 2}
+Rótulos: {'neutro': 264, 'misoginia': 21, 'pular': 7, 'odio_geral': 6, nan: 2}

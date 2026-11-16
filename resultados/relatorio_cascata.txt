@@ -1,0 +1,14 @@
+Léxico: 16 termos | limiar do BERTimbau sozinho: 0.43
+
+Validação: 3497 textos, 199 de misoginia, 14 com termo do léxico
+Limiares escolhidos: baixo = 0.41, alto = 0.42 (1 textos da validação caem na faixa intermediária)
+  BERTimbau (limiar 0.43): {'precisao': 0.694, 'recall': 0.6382, 'f1': 0.6649}
+  Cascata:                  {'precisao': 0.6957, 'recall': 0.6432, 'f1': 0.6684}
+  Léxico sozinho:           {'precisao': 0.7143, 'recall': 0.0503, 'f1': 0.0939}
+  (valores na validação, usada para escolher os limiares: não são a avaliação final)
+
+teste: 8318 textos | léxico em 7 | previstos como misóginos: BERTimbau 298, cascata 298
+
+amostra: 300 textos | léxico em 22 | previstos como misóginos: BERTimbau 13, cascata 13
+
+reddit: 2547 textos | léxico em 120 | previstos como misóginos: BERTimbau 35, cascata 37

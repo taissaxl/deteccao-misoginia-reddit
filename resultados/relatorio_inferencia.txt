@@ -1,0 +1,4 @@
+validacao :   3497 textos |   3 com normalização |    0 truncados em 512 tokens
+teste     :   8318 textos |   6 com normalização |    0 truncados em 512 tokens
+reddit    :   2547 textos |  19 com normalização |  420 truncados em 512 tokens
+amostra   :    300 textos |   13 truncados (esperado 0: posts com mais de 400 palavras ficaram fora da amostra)

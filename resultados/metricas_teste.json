@@ -1,0 +1,23 @@
+{
+  "modelo_base": "neuralmind/bert-base-portuguese-cased",
+  "max_len": 256,
+  "taxa_aprendizado": 2e-05,
+  "lote": 16,
+  "epocas_treinadas": 6.0,
+  "semente": 42,
+  "limiar_validacao": {
+    "limiar": 0.43000000000000005,
+    "f1_misoginia": 0.6280193236714976,
+    "precisao_misoginia": 0.6543624161073825,
+    "revocacao_misoginia": 0.6037151702786377,
+    "f1_macro": 0.8067976730752118
+  },
+  "auc": 0.9133789113552007,
+  "limiar_0.5": {
+    "limiar": 0.5,
+    "f1_misoginia": 0.627831715210356,
+    "precisao_misoginia": 0.6576271186440678,
+    "revocacao_misoginia": 0.6006191950464397,
+    "f1_macro": 0.8067364344562206
+  }
+}

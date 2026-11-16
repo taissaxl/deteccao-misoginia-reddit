@@ -1,0 +1,39 @@
+{
+  "limiar_baixo": 0.41,
+  "limiar_alto": 0.42,
+  "limiar_bertimbau": 0.43000000000000005,
+  "calibrado_em": "validacao das bases publicas",
+  "validacao_bertimbau": {
+    "precisao": 0.694,
+    "recall": 0.6382,
+    "f1": 0.6649
+  },
+  "validacao_cascata": {
+    "precisao": 0.6957,
+    "recall": 0.6432,
+    "f1": 0.6684
+  },
+  "validacao_lexico": {
+    "precisao": 0.7143,
+    "recall": 0.0503,
+    "f1": 0.0939
+  },
+  "termos_lexico": [
+    "bateu no wall",
+    "bostileira",
+    "coomecracia",
+    "coomecrata",
+    "escravoceta",
+    "femibostanismo",
+    "femimi",
+    "feminazi",
+    "feministo",
+    "femoid",
+    "hipergamia",
+    "mangina",
+    "miqueinha",
+    "modernete",
+    "mulher 304",
+    "mulher interesseira"
+  ]
+}
